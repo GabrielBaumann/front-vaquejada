@@ -1,6 +1,11 @@
 "use client";
 import { useState } from 'react';
 import VAC from '../../../public/d7eb08c10c9dde392c3552eef0abf936.jpeg'
+import VAC2 from '../../../public/cartaz.jpg'
+import VAC3 from '../../../public/cartaz (1).jpg'
+import VAC4 from '../../../public/cartaz (2).jpg'
+import VAC5 from '../../../public/vac.jpg'
+import VAC6 from '../../../public/aaaaaaaa.jpg'
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -10,70 +15,74 @@ export default function Home() {
   };
 
   return (
-    <div className="bg-black text-white font-sans">
-      <header className="flex justify-between items-center p-4 bg-black">
-        <h1 className="text-red-600 text-2xl font-bold">NETFLIX</h1>
+    <div className="bg-[#141414] text-white font-sans">
+      <header className="flex justify-between items-center bg-brown-500 p-4">
+        <h1 className="text-white text-2xl font-bold">Senha Pronta</h1>
         
-        {/* Ícone de hamburger para o menu */}
         <button className="md:hidden text-white" onClick={toggleMenu}>
           <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         </button>
 
-        {/* Menu no desktop */}
         <nav className="space-x-4 hidden md:flex">
-          <a href="#" className="text-white hover:underline">Início</a>
-          <a href="#" className="text-white hover:underline">Séries</a>
-          <a href="#" className="text-white hover:underline">Filmes</a>
-          <a href="#" className="text-white hover:underline">Bombando</a>
+          <a href="#" className="text-white hover:underline">Vaquejadas</a>
+          <a href="#" className="text-white hover:underline">Minhas Senhas</a>
+          <a href="#" className="text-white hover:underline">Sobre</a>
+          <a href="#" className="text-white hover:underline">Entrar</a>
         </nav>
       </header>
 
-      {/* Menu toggle no mobile */}
       {menuOpen && (
         <div className="md:hidden bg-black text-white p-4">
-          <a href="#" className="block py-2 hover:underline">Início</a>
-          <a href="#" className="block py-2 hover:underline">Séries</a>
-          <a href="#" className="block py-2 hover:underline">Filmes</a>
-          <a href="#" className="block py-2 hover:underline">Bombando</a>
+          <a href="#" className="block py-2 hover:underline">Vaquejadas</a>
+          <a href="#" className="block py-2 hover:underline">Minhas Senhas</a>
+          <a href="#" className="block py-2 hover:underline">Sobre</a>
+          <a href="#" className="block py-2 hover:underline">Entrar</a>
         </div>
       )}
 
       <main>
-        <div className="relative w-full h-[500px] sm:h-[600px] bg-cover bg-center" style={{ backgroundImage: "url('net.png')" }}>
-          <div className="absolute bottom-10 left-5 bg-black bg-opacity-60 p-4 rounded-md max-w-sm">
-            <h2 className="text-3xl font-bold">Civilization VI</h2>
-            <p className="text-sm">Jogo para celulares • Estratégia</p>
-            <p className="text-sm mt-2">Incluído na sua assinatura</p>
-            <p className="text-sm mt-2">Erga cidades gigantescas, invista em progresso cultural e crie alianças... ou declare guerras.</p>
-            <div className="mt-4 flex space-x-2">
-              <button className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">Baixar o jogo para celulares</button>
-              <button className="bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700">Enviar para meu celular ou tablet</button>
-            </div>
+      <div className="relative w-full h-[500px] sm:h-[600px] bg-[#141414] flex justify-center sm:justify-start">
+        <img
+          src={VAC6.src}
+          alt="Imagem de fundo"
+          className="absolute top-0 sm:left-0 sm:w-full sm:h-full object-cover 
+                    w-[80%] h-[80%] sm:w-full sm:h-full sm:object-cover rounded"
+        />
+        <div className="absolute bottom-10 left-5 p-4 rounded-md max-w-sm">
+          <h2 className="text-3xl sm:text-6xl font-bold">Grande Vaquejada</h2>
+          <div className="mt-4 flex space-x-2">
+            <button className="bg-white text-black font-semibold px-4 py-2 rounded hover:bg-yellow-700 sm:text-4xl sm:px-6 sm:py-3">
+              Comprar Senha
+            </button>
+            <button className="bg-gray-400 bg-opacity-50 text-white px-4 py-2 rounded hover:bg-gray-700 sm:text-2xl sm:px-6 sm:py-3">
+              Mais informações
+            </button>
           </div>
         </div>
+      </div>
 
         <section className="p-6">
-          <h3 className="text-xl font-bold mb-4">Filmes e séries em português</h3>
+          <h3 className="text-xl font-bold mb-4">Vaquejadas</h3>
           <div className="hidden md:grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
-            <div className="bg-gray-800 h-80 w-full rounded-md overflow-hidden">
+            <div className="bg-gray-800 h-100 w-full rounded-md overflow-hidden">
               <img src={VAC.src} alt="Filme 1" className="object-cover w-full h-full" />
             </div>
-            <div className="bg-gray-800 h-80 w-full rounded-md overflow-hidden">
-              <img src="movie2.jpg" alt="Filme 2" className="object-cover w-full h-full" />
+            <div className="bg-gray-800 h-100 w-full rounded-md overflow-hidden">
+              <img src={VAC2.src} alt="Filme 2" className="object-cover w-full h-full" />
             </div>
-            <div className="bg-gray-800 h-80 w-full rounded-md overflow-hidden">
-              <img src="movie3.jpg" alt="Filme 3" className="object-cover w-full h-full" />
+            <div className="bg-gray-800 h-100 w-full rounded-md overflow-hidden">
+              <img src={VAC3.src} alt="Filme 3" className="object-cover w-full h-full" />
             </div>
-            <div className="bg-gray-800 h-80 w-full rounded-md overflow-hidden">
-              <img src="movie4.jpg" alt="Filme 4" className="object-cover w-full h-full" />
+            <div className="bg-gray-800 h-100 w-full rounded-md overflow-hidden">
+              <img src={VAC4.src} alt="Filme 4" className="object-cover w-full h-full" />
             </div>
-            <div className="bg-gray-800 h-80 w-full rounded-md overflow-hidden">
-              <img src="movie5.jpg" alt="Filme 5" className="object-cover w-full h-full" />
+            <div className="bg-gray-800 h-100 w-full rounded-md overflow-hidden">
+              <img src={VAC.src} alt="Filme 5" className="object-cover w-full h-full" />
             </div>
-            <div className="bg-gray-800 h-80 w-full rounded-md overflow-hidden">
-              <img src="movie6.jpg" alt="Filme 6" className="object-cover w-full h-full" />
+            <div className="bg-gray-800 h-100 w-full rounded-md overflow-hidden">
+              <img src={VAC2.src} alt="Filme 6" className="object-cover w-full h-full" />
             </div>
           </div>
 
@@ -82,13 +91,13 @@ export default function Home() {
               <img src={VAC.src} alt="Filme 1" className="object-cover w-full h-full" />
             </div>
             <div className="bg-gray-800 h-96 min-w-[70%] rounded-md overflow-hidden">
-              <img src="movie2.jpg" alt="Filme 2" className="object-cover w-full h-full" />
+              <img src={VAC2.src} alt="Filme 2" className="object-cover w-full h-full" />
             </div>
             <div className="bg-gray-800 h-96 min-w-[70%] rounded-md overflow-hidden">
-              <img src="movie3.jpg" alt="Filme 3" className="object-cover w-full h-full" />
+              <img src={VAC3.src} alt="Filme 3" className="object-cover w-full h-full" />
             </div>
             <div className="bg-gray-800 h-96 min-w-[70%] rounded-md overflow-hidden">
-              <img src="movie4.jpg" alt="Filme 4" className="object-cover w-full h-full" />
+              <img src={VAC4.src} alt="Filme 4" className="object-cover w-full h-full" />
             </div>
           </div>
         </section>
