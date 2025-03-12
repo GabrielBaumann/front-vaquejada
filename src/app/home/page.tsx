@@ -17,6 +17,7 @@ import NORDESTE from '../../../public/nordeste.jpg'
 import BRITOS from '../../../public/britos.webp'
 import VAQUEIROS from '../../../public/vaqueiros.jpg'
 import INTER from '../../../public/inter.avif'
+import Vaquejadas from '@/components/Vaquejadas';
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -29,7 +30,7 @@ export default function Home() {
     <div className="bg-gradient-to-t from-[#3d3d3d] to-[#3d3d3d] text-white">
   <main>
     <div className="w-full h-[75vh] flex flex-col items-center md:relative bg-gradient-to-t from-brown-800 to-brown-400">
-      {/* Header sobre a imagem */}
+      
       <header className="absolute top-0 left-0 right-0 flex justify-between items-center bg-brown-500 p-6 md:p-12 z-20">
         <h1 className="text-white text-2xl font-bold">Senha Pronta</h1>
         <button className="md:hidden text-white" onClick={toggleMenu}>
@@ -53,7 +54,7 @@ export default function Home() {
           alt="Imagem de fundo"
           className="w-full h-full object-cover md:object-[center_50%] rounded-2xl md:rounded-none"
         />
-        <div className="hidden md:block absolute inset-0 md:rounded-none bg-[radial-gradient(circle,_rgba(0,0,0,0)_40%,_rgba(0,0,0,0.8)_90%)] pointer-events-none"></div>
+        <div className="hidden md:block absolute inset-0 md:rounded-none bg-[radial-gradient(circle,_rgba(0,0,0,0)_1%,_rgba(0,0,0,0.8)_50%)] pointer-events-none"></div>
       </div>
 
 
@@ -76,54 +77,8 @@ export default function Home() {
       </h1>
     </div>
 
-    {menuOpen && (
-      <div className="md:hidden bg-black text-white p-4">
-        <a href="#" className="block py-2 hover:underline">Vaquejadas</a>
-        <a href="#" className="block py-2 hover:underline">Minhas Senhas</a>
-        <a href="#" className="block py-2 hover:underline">Sobre</a>
-        <a href="#" className="block py-2 hover:underline">Entrar</a>
-      </div>
-    )}
+    <Vaquejadas/>
 
-    <section className="p-6">
-      <h1 className='font-semibold text-3xl mb-4'>Todas as vaquejadas</h1>
-      <div className="hidden md:grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-10">
-        <div className="bg-gray-800 h-100 w-full rounded-md overflow-hidden transform transition-all duration-300 hover:scale-105">
-          <img src={VAC.src} alt="Filme 1" className="object-cover w-full h-full cursor-pointer" />
-        </div>
-        <div className="bg-gray-800 h-100 w-full rounded-md overflow-hidden transform transition-all duration-300 hover:scale-105">
-          <img src={VAC2.src} alt="Filme 2" className="object-cover w-full h-full cursor-pointer" />
-        </div>
-        <div className="bg-gray-800 h-100 w-full rounded-md overflow-hidden transform transition-all duration-300 hover:scale-105">
-          <img src={VAC3.src} alt="Filme 3" className="object-cover w-full h-full cursor-pointer" />
-        </div>
-        <div className="bg-gray-800 h-100 w-full rounded-md overflow-hidden transform transition-all duration-300 hover:scale-105">
-          <img src={VAC4.src} alt="Filme 4" className="object-cover w-full h-full cursor-pointer" />
-        </div>
-        <div className="bg-gray-800 h-100 w-full rounded-md overflow-hidden transform transition-all duration-300 hover:scale-105">
-          <img src={VAC.src} alt="Filme 5" className="object-cover w-full h-full cursor-pointer" />
-        </div>
-        <div className="bg-gray-800 h-100 w-full rounded-md overflow-hidden transform transition-all duration-300 hover:scale-105">
-          <img src={VAC2.src} alt="Filme 6" className="object-cover w-full h-full cursor-pointer" />
-        </div>
-      </div>
-
-
-      <div className="md:hidden flex overflow-x-auto space-x-4 pb-4">
-        <div className="bg-gray-800 h-96 min-w-[70%] rounded-md overflow-hidden">
-          <img src={VAC.src} alt="Filme 1" className="object-cover w-full h-full" />
-        </div>
-        <div className="bg-gray-800 h-96 min-w-[70%] rounded-md overflow-hidden">
-          <img src={VAC2.src} alt="Filme 2" className="object-cover w-full h-full" />
-        </div>
-        <div className="bg-gray-800 h-96 min-w-[70%] rounded-md overflow-hidden">
-          <img src={VAC3.src} alt="Filme 3" className="object-cover w-full h-full" />
-        </div>
-        <div className="bg-gray-800 h-96 min-w-[70%] rounded-md overflow-hidden">
-          <img src={VAC4.src} alt="Filme 4" className="object-cover w-full h-full" />
-        </div>
-      </div>
-    </section>
   </main>
 </div>
 
