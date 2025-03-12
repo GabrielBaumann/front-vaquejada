@@ -21,7 +21,7 @@ import Vaquejadas from '@/components/Vaquejadas';
 
 export default function Home() {
   return (
-    <div className="bg-gradient-to-t from-[blue] to-[#2B2B2B] text-white">
+    <div className="bg-[#2B2B2B] text-white">
     <main>
     <div className="w-full h-[75vh] flex flex-col items-center md:relative">
       <header className="absolute top-0 left-0 right-0 flex justify-between items-center p-6 md:p-12 z-20">

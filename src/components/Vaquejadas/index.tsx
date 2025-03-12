@@ -17,9 +17,9 @@ const images = [VAC, VAC2, VAC3, VAC4];
 
 export default function VaquejadaSection() {
   return (
-    <div>
-      <section className="p-6 relative flex flex-col items-center md:h-200">
-      <h1 className="font-normal text-3xl mb-2 md:hidden">Vaquejadas</h1>
+    <div className='bg-gradient-to-t from-[blue] to-[#2B2B2B] text-white'>
+      <section className="p-6 relative flex flex-col items-center md:h-185">
+      <h1 className="font-semibold text-align-left text-3xl mb-2 md:hidden">Todas as Vaquejadas</h1>
 
       <div className="relative flex items-center justify-center w-full">
         <button className="hidden md:flex absolute left-4 bg-black/50 p-3 rounded-full z-10">
@@ -38,21 +38,22 @@ export default function VaquejadaSection() {
 
       <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
-      {/* Stack buttons vertically */}
-      <div className="absolute inset-x-0 bottom-8 flex flex-col justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-        <button className="flex items-center gap-2 w-full bg-yellow-400 text-black font-semibold hover:bg-yellow-500 rounded mb-2 transition shadow-lg md:px-4 md:py-2 md:text-sm text-xs cursor-pointer">
+      <div className="absolute inset-x-0 bottom-2 p-4 flex flex-col justify-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <button className="flex items-center justify-center gap-2 w-full h-[50px] bg-yellow-400 text-black font-semibold hover:bg-yellow-500 rounded mb-2 transition shadow-lg md:px-4 md:py-2 md:text-sm text-xs cursor-pointer">
           <img src={plus.src} alt="Comprar" className="w-4 h-4 md:w-5 md:h-5" />
-          Comprar
+          Comprar Senha
         </button>
-        <button className="flex items-center gap-2 bg-gray-700 text-white font-semibold hover:bg-gray-800 rounded mb-2 transition shadow-lg md:px-4 md:py-2 md:text-sm text-xs cursor-pointer">
+        
+        <button className="flex items-center justify-center gap-2 w-full h-[50px] bg-gray-700 text-white font-semibold hover:bg-gray-800 rounded mb-2 transition shadow-lg md:px-4 md:py-2 md:text-sm text-xs cursor-pointer">
           <img src={info.src} alt="Info" className="w-4 h-4 md:w-5 md:h-5" />
-          Info
+          Mais Informações
         </button>
       </div>
 
     </div>
   ))}
 </div>
+
 
         <div className="md:hidden flex overflow-x-auto space-x-4 pb-4 w-full px-6">
           {images.slice(0, 4).map((img, index) => (
